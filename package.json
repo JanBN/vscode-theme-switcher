@@ -4,7 +4,7 @@
     "description": "Quickly switch between themes.",
     "publisher": "JanBn",
     "icon": "images/icon.png",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "galleryBanner": {
         "color": "#947500",
         "theme": "dark"
