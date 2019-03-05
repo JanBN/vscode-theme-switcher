@@ -26,6 +26,6 @@ You can define your extensions list in this setting
 
 `"themeSwitcher.themesList": "Visual Studio Dark,Visual Studio Light"`
 
-![](https://media.giphy.com/media/4Nk6EGaAnNeVi/giphy.gif)
+![](https://raw.githubusercontent.com/JanBN/vscode-theme-switcher/master/images/animation.gif)
 
 <div>Icons made by <a href="https://www.flaticon.com/authors/ocha" title="OCHA">OCHA</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
