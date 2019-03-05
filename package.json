@@ -2,6 +2,7 @@
     "name": "vscode-theme-switcher",
     "displayName": "Theme switcher",
     "description": "Quickly switch between themes.",
+    "publisher": "JanBn",
     "icon": "images/icon.png",
     "version": "0.0.1",
     "galleryBanner": {
@@ -94,8 +95,11 @@
         "test": "npm run compile && node ./node_modules/vscode/bin/test"
     },
     "devDependencies": {
+        "@types/node": "^7.0.43",
         "typescript": "^2.5.2",
-        "vscode": "^1.1.5",
-        "@types/node": "^7.0.43"
+        "vscode": "^1.1.30"
+    },
+    "dependencies": {
+        "vsce": "^1.57.1"
     }
 }
