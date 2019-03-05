@@ -1,0 +1,103 @@
+{
+    "name": "vscode-theme-switcher",
+    "displayName": "Theme switcher",
+    "description": "Quickly switch between themes.",
+    "icon": "images/icon.png",
+    "version": "0.0.1",
+    "galleryBanner": {
+        "color": "#947500",
+        "theme": "dark"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/freetonik/vscode-dnts"
+    },
+    "engines": {
+        "vscode": "^1.16.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "keywords": [
+        "theme",
+        "switch",
+        "cycle",
+        "day",
+        "night"
+    ],
+    "license": "SEE LICENSE IN LICENSE",
+    "activationEvents": [
+        "onCommand:themeSwitcher.nextSelectedTheme",
+        "onCommand:themeSwitcher.previousSelectedTheme",
+        "onCommand:themeSwitcher.nextTheme",
+        "onCommand:themeSwitcher.previousTheme"
+    ],
+    "main": "./out/src/extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "themeSwitcher.nextSelectedTheme",
+                "title": "Next Theme (from separate list in config)"
+            },
+            {
+                "command": "themeSwitcher.previousSelectedTheme",
+                "title": "Previous Theme (from separate list in config)"
+            },
+            {
+                "command": "themeSwitcher.nextTheme",
+                "title": "Next Theme"
+            },
+            {
+                "command": "themeSwitcher.previousTheme",
+                "title": "Previous Theme"
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "themeSwitcher.previousSelectedTheme",
+                "key": "ctrl+shift+F9",
+                "mac": "cmd+shift+F9"
+            },
+            {
+                "command": "themeSwitcher.nextSelectedTheme",
+                "key": "ctrl+shift+F10",
+                "mac": "cmd+shift+F10"
+            },
+            {
+                "command": "themeSwitcher.previousTheme",
+                "key": "ctrl+shift+F11",
+                "mac": "cmd+shift+F11"
+            },
+            {
+                "command": "themeSwitcher.nextTheme",
+                "key": "ctrl+shift+F12",
+                "mac": "cmd+shift+F12"
+            }
+        ],
+        "configuration": {
+            "type": "object",
+            "title": "Themes to switch in cycle",
+            "properties": {
+                "themeSwitcher.themesList": {
+                    "type": "string",
+                    "default": "Visual Studio Dark,Visual Studio Light",
+                    "description": "Selected theme names delimited by comma ('Visual Studio Dark,Visual Studio Light')"
+                }
+            }
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "npm run compile && node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.5.2",
+        "vscode": "^1.1.5",
+        "mocha": "^3.5.0",
+        "@types/node": "^7.0.43",
+        "@types/mocha": "^2.2.42"
+    }
+}
